@@ -22,7 +22,6 @@ for letter in s:
       temp2 = temp2 + letter
   else:
     if not (str(letter) < "a"):
-    #verify this "if not" string works
       if len(temp2) > len(temp3):
         temp3 = temp2
         temp1 = "a"
