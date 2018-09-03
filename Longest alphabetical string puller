@@ -1,7 +1,7 @@
 s = input("Please input a string of lowercase letters: ")
 temp1 = "a"
 temp2 = 0
-temp3 = "There is no alphabetical string"
+temp3 = 0
 #temp1 is the previous letter
 #temp2 is the current string
 #temp3 is the longest string
@@ -9,7 +9,6 @@ temp3 = "There is no alphabetical string"
 for first in s:
   if str(first) >= temp1:
     temp1 = first
-    temp2 = first
     break
 
 for letter in s:
