@@ -1,0 +1,23 @@
+numbob = 0
+temp1 = 0
+temp2 = 0
+
+for bob in s: 
+    if temp1 == "b" and temp2 == "o" and bob == "b":
+        numbob += 1
+        temp2 = 0
+    elif bob == "b":
+        temp1 = "b"
+    elif bob == "o":
+        if temp1 != "b":
+            temp1 = 0
+            temp2 = 0
+        elif temp2 == "o":
+            temp1 = 0
+            temp2 = 0
+        else:
+            temp2 = "o"
+    else:
+        temp1 = 0
+        temp2 = 0
+print(numbob)
