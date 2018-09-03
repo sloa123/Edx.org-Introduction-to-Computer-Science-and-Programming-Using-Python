@@ -1,4 +1,4 @@
-s = input("Please input a string of lowercase letters: ")
+s = input("Hello Dave: ")
 temp1 = "a"
 temp2 = 0
 temp3 = 0
