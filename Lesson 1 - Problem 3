@@ -31,7 +31,4 @@ for letter in s:
       else:
         temp1 = letter
         temp2 = letter
-    else:
-      temp1 = letter
-      temp2 = letter
 print("Longest substring in alphabetical order is: " + str(temp3))
