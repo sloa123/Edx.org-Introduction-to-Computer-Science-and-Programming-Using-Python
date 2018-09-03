@@ -14,13 +14,13 @@ temp3 = 0
 #temp3 is the longest string
 
 for first in s:
-  if str(first) >= temp1:
+  if first >= temp1:
     temp1 = first
     temp3 = first
     break
 
 for letter in s:
-  if str(letter) >= temp1:
+  if letter >= temp1:
     if temp2 == 0:
       temp1 = letter
       temp2 = letter
@@ -30,7 +30,7 @@ for letter in s:
       if len(temp2) > len(temp3):
         temp3 = temp2
   else:
-    if not str(letter) < "a":
+    if not letter < "a":
       if len(temp2) > len(temp3):
         temp3 = temp2
         temp1 = letter
