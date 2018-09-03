@@ -9,11 +9,13 @@ temp3 = 0
 for first in s:
   if str(first) >= temp1:
     temp1 = first
+    temp3 = first
     break
 
 for letter in s:
   if str(letter) >= temp1:
-    if temp2 = 0:
+    if temp2 == 0:
+      temp1 = letter
       temp2 = letter
     else:
       temp1 = letter
