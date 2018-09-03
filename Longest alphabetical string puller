@@ -1,0 +1,21 @@
+s = input("Please input a string of lowercase letters: ")
+temp1 = "a"
+temp2 = 0
+temp3 = 0
+#temp1 is the previous letter
+#temp2 is the current string
+#temp3 is the longest string
+
+for letter in s:
+  if letter >= temp1:
+    temp1 = letter
+    temp2 = temp2 + letter
+  else:
+    if len(temp2) > len(temp3):
+      temp3 = temp2
+      temp1 = "a"
+      temp2 = 0
+    else:
+      temp1 = "a"
+      temp2 = 0
+print("Longest substring in alphabetical order is: " + str(temp3))
