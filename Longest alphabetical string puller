@@ -23,15 +23,14 @@ for letter in s:
       if len(temp2) > len(temp3):
         temp3 = temp2
   else:
-    if not (str(letter) < "a"):
-    #Are these () necessary?
+    if not str(letter) < "a":
       if len(temp2) > len(temp3):
         temp3 = temp2
-        temp1 = "a"
+        temp1 = letter
         temp2 = 0
       else:
-        temp1 = "a"
-        temp2 = 0
+        temp1 = letter
+        temp2 = letter
     else:
       temp1 = letter
       temp2 = letter
