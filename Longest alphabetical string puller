@@ -13,14 +13,19 @@ for first in s:
 
 for letter in s:
   if str(letter) >= temp1:
-    temp1 = letter
-    temp2 = temp2 + letter
-  else:
-    if len(temp2) > len(temp3):
-      temp3 = temp2
-      temp1 = "a"
-      temp2 = 0
+    if temp2 = 0:
+      temp2 = letter
     else:
-      temp1 = "a"
-      temp2 = 0
+      temp1 = letter
+      temp2 = temp2 + letter
+  else:
+    if not (str(letter) < "a"):
+    #verify this "if not" string works
+      if len(temp2) > len(temp3):
+        temp3 = temp2
+        temp1 = "a"
+        temp2 = 0
+      else:
+        temp1 = "a"
+        temp2 = 0
 print("Longest substring in alphabetical order is: " + str(temp3))
