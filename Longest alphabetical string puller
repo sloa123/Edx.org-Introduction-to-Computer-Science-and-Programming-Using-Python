@@ -29,4 +29,6 @@ for letter in s:
       else:
         temp1 = "a"
         temp2 = 0
+    else:
+      temp2 = 0
 print("Longest substring in alphabetical order is: " + str(temp3))
