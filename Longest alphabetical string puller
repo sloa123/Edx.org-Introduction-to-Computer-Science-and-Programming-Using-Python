@@ -20,8 +20,11 @@ for letter in s:
     else:
       temp1 = letter
       temp2 = temp2 + letter
+      if len(temp2) > len(temp3):
+        temp3 = temp2
   else:
     if not (str(letter) < "a"):
+    #Are these () necessary?
       if len(temp2) > len(temp3):
         temp3 = temp2
         temp1 = "a"
