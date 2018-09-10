@@ -1,0 +1,12 @@
+def isIn(char, aStr):
+  temp = int(len(aStr)/2 + 0.5)
+  if aStr == "":
+    return False
+  elif len(aStr) == 1:
+    return (char == aStr)
+  elif aStr[temp] == char:
+    return True
+  elif aStr[temp] > char:
+    return isIn(char, aStr[:(temp-1)])
+  elif aStr[temp] < char:
+    return isIn(char, aStr[temp+1:])
