@@ -13,10 +13,13 @@ def remaining_balance(balance, annualInterestRate, monthlyPaymentRate):
     output:
     remaining balance at the end of 12 months
     """
-    month = 1
+    month = 0
+    monthlyInterestRate = annualInterestRate/12
+    
     while month < 12:
-        balance = balance + balance*(annualInterestRate/12) - balance*monthlyPaymentRate
+        balance = balance - monthlyPaymentRate*balance
+        balance = balance + balance*monthlyInterestRate
         month += 1
     return balance
 
-print(round(remaining_balance(balance, annualInterestRate, MonthlyPaymentRate),2))
+print("Remaining balance : " + str(round(remaining_balance(balance, annualInterestRate, monthlyPaymentRate),2)))
