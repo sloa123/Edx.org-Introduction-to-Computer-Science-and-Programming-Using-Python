@@ -7,6 +7,6 @@ def isIn(char, aStr):
   elif aStr[temp] == char:
     return True
   elif aStr[temp] > char:
-    return isIn(char, aStr[:(temp-1)])
+    return isIn(char, aStr[:(temp)])
   elif aStr[temp] < char:
     return isIn(char, aStr[temp+1:])
