@@ -1,0 +1,24 @@
+balance = float(input("Please type the current balance: "))
+annualInterestRate = float(input("Please type the annual interest rate as a decimal: "))
+
+newBalance = 1
+monthlyInterestRate = annualInterestRate/12
+lower = balance/12
+upper = (balance + balance*annualInterestRate)/12
+fixedPayment = (upper+lower)/2
+
+while abs(upper - lower) > 0.01:
+  if newBalance == 1:
+      pass
+  elif newBalance < 0:
+      upper = fixedPayment
+      fixedPayment = (upper+lower)/2
+  elif newBalance > 0:
+      lower = fixedPayment
+      fixedPayment = (upper+lower)/2
+  newBalance = balance
+  for month in range(0,13):
+    if month < 12:
+      newBalance = newBalance - fixedPayment
+      newBalance = newBalance + newBalance*monthlyInterestRate
+print("Lowest Payment: " + str(round(fixedPayment,2)))
